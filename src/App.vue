@@ -109,22 +109,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    opacity: 0;
+    animation: fadeInLeft 500ms forwards;
 }
 
 .title {
     font-family: "Georgia_Bold";
     color: rgb(77, 77, 77);
     font-size: 48px;
-
-    .hello {
-        opacity: 0;
-        animation: fadeInLeft 500ms forwards;
-    }
     
     .name {
         text-transform: uppercase;
-        opacity: 0;
-        animation: fadeInLeft 500ms 250ms forwards;
     }
 }
 
@@ -132,9 +128,6 @@ body {
     font-family: 'Times New Roman';
     color: rgb(101, 101, 101);
     font-size: 18px;
-
-    opacity: 0;
-    animation: fadeInLeft 500ms 500ms forwards;
 }
 
 button {
@@ -151,8 +144,6 @@ button {
     border-radius: 50px;
 
     &:hover, &:not(:hover) {
-        animation-fill-mode: none;
-        opacity: 1;
         transition: all ease 0.25s;
     }
 
@@ -163,9 +154,6 @@ button {
     &:not(:hover) {
         transform: scale(1);
     }
-
-    opacity: 0;
-    animation: fadeInLeft 500ms 750ms forwards;
 }
 
 .picture {
@@ -175,12 +163,18 @@ button {
     box-shadow: 5px 5px 10px 5px rgb(240,240,240);
 
     opacity: 0;
-    animation: zoomIn 500ms 1s forwards;
+    animation: zoomIn 500ms 250ms forwards;
 }
 
 .arrow {
     position: absolute;
     right: 0;
+}
+
+@media screen and (max-width: 1600px) {
+    .arrow {
+        right: -15%;
+    }
 }
 
 @media screen and (max-width: 1200px) {
