@@ -150,14 +150,18 @@ button {
     font-family: 'Arial';
     border-radius: 50px;
 
+    &:hover, &:not(:hover) {
+        animation-fill-mode: none;
+        opacity: 1;
+        transition: all ease 0.25s;
+    }
+
     &:hover {
         transform: scale(1.1);
-        transition: transform ease-in 0.25s;
     }
 
     &:not(:hover) {
         transform: scale(1);
-        transition: transform ease-out 0.25s;
     }
 
     opacity: 0;
@@ -177,6 +181,12 @@ button {
 .arrow {
     position: absolute;
     right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .arrow {
+        display: none;
+    }
 }
 
 // ANIMATIONS
