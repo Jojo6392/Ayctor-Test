@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+        <img class="back-arrow" src="./assets/back-arrow.svg" alt="back arrow">
+
         <div class="content">
             <div class="title">
                 <div class="hello">
@@ -166,7 +168,7 @@ button {
     animation: zoomIn 500ms 250ms forwards;
 }
 
-.arrow {
+.arrow, .back-arrow {
     position: absolute;
     right: 0;
 }
